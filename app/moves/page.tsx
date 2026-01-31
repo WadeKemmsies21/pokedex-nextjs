@@ -26,7 +26,9 @@ export default function MovesPage() {
 
   return (
     <main className="p-4 max-w-3xl mx-auto">
-      <h1>Moves</h1>
+            <BackButton />
+      
+      <h1 className="text-2xl font-bold text-center">Moves</h1>
 
       <input
         type="text"

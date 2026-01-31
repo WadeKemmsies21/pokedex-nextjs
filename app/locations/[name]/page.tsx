@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BackButton from "@/app/components/BackButton";
 
 async function getLocation(name: string) {
@@ -22,25 +23,47 @@ export default async function LocationDetailPage({
   const location = await getLocation(name);
 
   return (
-    <main className="p-4 max-w-3xl mx-auto">
-        <BackButton />
-      <h1>{location.name.replaceAll("-", " ")}</h1>
+    <main className="p-4 max-w-3xl mx-auto space-y-6">
+      <BackButton />
 
-      <p>
-        <strong>Location:</strong>{" "}
-        {location.location.name.replaceAll("-", " ")}
-      </p>
+      {/* Page Title */}
+      <h1 className="text-3xl font-bold capitalize text-center">
+        {location.name.replaceAll("-", " ")}
+      </h1>
 
-      <h2>Pokémon Found Here</h2>
-      <ul className="space-y-2">
-        {location.pokemon_encounters.map(
-          (entry: { pokemon: { name: string } }) => (
-            <li key={entry.pokemon.name}>
-              {entry.pokemon.name.replaceAll("-", " ")}
-            </li>
-          )
+      {/* Parent Location Card */}
+      <section className="border rounded-lg p-4 space-y-2">
+        <h2 className="text-xl font-semibold">Region Location</h2>
+        <p className="capitalize">
+          {location.location.name.replaceAll("-", " ")}
+        </p>
+      </section>
+
+      {/* Pokemon Encounters */}
+      <section className="border rounded-lg p-4 space-y-4">
+        <h2 className="text-xl font-semibold">
+          Pokémon Found Here
+        </h2>
+
+        {location.pokemon_encounters.length === 0 ? (
+          <p>No Pokémon encounters found.</p>
+        ) : (
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {location.pokemon_encounters.map(
+              (entry: { pokemon: { name: string } }) => (
+                <li key={entry.pokemon.name} className="h-full">
+                  <Link
+                    href={`/pokemon/${entry.pokemon.name}`}
+                    className="flex h-full items-center justify-center border rounded p-2 text-center capitalize hover:bg-gray-100 transition"
+                  >
+                    {entry.pokemon.name.replaceAll("-", " ")}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
         )}
-      </ul>
+      </section>
     </main>
   );
 }

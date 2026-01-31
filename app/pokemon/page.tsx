@@ -32,7 +32,7 @@ export default function PokemonPage() {
     
     <main className="p-4 max-w-3xl mx-auto">
       <BackButton />
-      <h1 className="text-2xl font-bold mb-4">Pokémon</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Pokémon</h1>
 
       <input
         type="text"
