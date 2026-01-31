@@ -43,7 +43,7 @@ export default async function PokemonDetailPage({
   <div className="p-4 space-y-6 max-w-3xl mx-auto">
     <BackButton />
 
-    <h1 className="text-3xl font-bold capitalize">
+    <h1 className="text-3xl font-bold capitalize text-center">
       {pokemon.name}
     </h1>
 

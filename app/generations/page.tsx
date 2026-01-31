@@ -31,7 +31,7 @@ export default function GenerationsPage() {
   return (
     <main className="p-4 max-w-3xl mx-auto">
       <BackButton />
-      <h1 className="text-2xl font-bold mb-4">Generations</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Generations</h1>
 
       <input
         type="text"

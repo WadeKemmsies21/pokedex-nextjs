@@ -27,13 +27,13 @@ export default async function MoveDetailPage({
     <BackButton />
 
     {/* Title */}
-    <h1 className="text-3xl font-bold capitalize">
+    <h1 className="text-3xl font-bold capitalize text-center">
       {move.name.replaceAll("-", " ")}
     </h1>
 
     {/* Move Stats Card */}
     <section className="border rounded-lg p-4 shadow-sm">
-      <h2 className="text-xl font-semibold mb-3">
+      <h2 className="text-xl font-semibold mb-3 text-center">
         Move Stats
       </h2>
 
