@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mega Pokedex (Next.js)
 
-## Getting Started
+A fully responsive Pokedex web application built with Next.js that consumes the public PokeAPI. Users can browse Pokémon, locations, moves, and generations, and view detailed information for each item.
 
-First, run the development server:
+## 🔗 Live Deployment
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://pokedex-nextjs-mauve.vercel.app/pokemon
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This application allows users to explore Pokémon data using the PokeAPI. The app provides searchable lists and detailed views for Pokémon, locations, moves, and generations.
 
-## Learn More
+The application is fully responsive and works on both desktop and mobile devices.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Browse Pokémon, Locations, Moves, and Generations
+- Search major lists client-side
+- Detailed Pokémon pages showing:
+  - Stats
+  - Sprites (Normal + Shiny)
+  - Moves learned
+  - Encounter locations
+- Location pages showing:
+  - Region
+  - Sub areas
+  - Pokémon found in each area
+- Move pages showing:
+  - Accuracy
+  - Power
+  - Power Points
+  - Flavor text from games
+  - Pokémon that learn the move
+- Generation pages showing:
+  - Primary region
+  - Pokémon in that generation
+- Back navigation button on detail pages
+- Mobile responsive UI
+- Tab navigation layout
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- PokeAPI (https://pokeapi.co)
+
+---
+
+## 📂 Application Routes
+
+### Home
